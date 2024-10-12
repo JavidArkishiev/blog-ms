@@ -1,0 +1,211 @@
+openapi: 3.0.3
+info:
+  description: blog_ms API
+  title: blog_ms API
+  version: 1.0.0
+servers:
+- url: https://blog_ms
+paths:
+  /posts:
+    get:
+      operationId: getAllPost
+      parameters:
+      - explode: true
+        in: query
+        name: page
+        required: false
+        schema:
+          format: int32
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: size
+        required: false
+        schema:
+          format: int32
+          type: integer
+        style: form
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                items:
+                  $ref: '#/components/schemas/PostResponseDto'
+                type: array
+          description: OK
+      summary: GET posts
+      x-accepts: '*/*'
+    post:
+      operationId: createPost
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostRequestDto'
+        required: true
+      responses:
+        "201":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: Created
+      summary: POST posts
+      x-contentType: application/json
+      x-accepts: '*/*'
+  /posts/my-post:
+    get:
+      operationId: getMyPost
+      parameters:
+      - explode: true
+        in: query
+        name: page
+        required: false
+        schema:
+          format: int32
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: size
+        required: false
+        schema:
+          format: int32
+          type: integer
+        style: form
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                items:
+                  $ref: '#/components/schemas/MyPostResponseDto'
+                type: array
+          description: OK
+      summary: GET posts/my-post
+      x-accepts: '*/*'
+  /posts/{postId}:
+    delete:
+      operationId: deleteMyPost
+      parameters:
+      - explode: false
+        in: path
+        name: postId
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      summary: DELETE posts/{postId}
+      x-accepts: '*/*'
+    get:
+      operationId: getPostById
+      parameters:
+      - explode: false
+        in: path
+        name: postId
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/PostResponseDto'
+          description: OK
+      summary: GET posts/{postId}
+      x-accepts: '*/*'
+    put:
+      operationId: updateMyPost
+      parameters:
+      - explode: false
+        in: path
+        name: postId
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostRequestDto'
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      summary: PUT posts/{postId}
+      x-contentType: application/json
+      x-accepts: '*/*'
+components:
+  schemas:
+    PostRequestDto:
+      example:
+        title: title
+        content: content
+      properties:
+        title:
+          type: string
+        content:
+          type: string
+      type: object
+    MyPostResponseDto:
+      example:
+        createdAt: 2000-01-23T04:56:07.000+00:00
+        postId: 0
+        title: title
+        content: content
+      properties:
+        postId:
+          format: int64
+          type: integer
+        title:
+          type: string
+        content:
+          type: string
+        createdAt:
+          format: date-time
+          type: string
+      type: object
+    PostResponseDto:
+      example:
+        createdAt: 2000-01-23T04:56:07.000+00:00
+        surName: surName
+        name: name
+        postId: 0
+        title: title
+        content: content
+      properties:
+        postId:
+          format: int64
+          type: integer
+        title:
+          type: string
+        content:
+          type: string
+        name:
+          type: string
+        surName:
+          type: string
+        createdAt:
+          format: date-time
+          type: string
+      type: object
+

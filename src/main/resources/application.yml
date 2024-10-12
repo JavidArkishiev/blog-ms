@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: blog-ms
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/blog-db
+    username: postgres
+    password: 5253228432
+  jpa:
+    #    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        store_data_at_delete: true
+        default_schema: blog_ms
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+swagger-ui:
+  path: /swagger-ui.html
+  enabled: true
+server:
+  port: ${PORT:9595}
+
+jwt:
+  secret: 413F4428472B4B6250655368566D5970337336763979244226452948404D6351
