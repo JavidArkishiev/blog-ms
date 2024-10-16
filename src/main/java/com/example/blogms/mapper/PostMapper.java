@@ -3,7 +3,6 @@ package com.example.blogms.mapper;
 import com.example.blogms.dto.request.PostRequestDto;
 import com.example.blogms.dto.response.MyPostResponseDto;
 import com.example.blogms.dto.response.PostResponseDto;
-import com.example.blogms.dto.response.UserResponseDto;
 import com.example.blogms.entity.Post;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

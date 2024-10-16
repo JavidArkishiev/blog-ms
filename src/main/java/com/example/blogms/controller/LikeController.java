@@ -1,6 +1,6 @@
 package com.example.blogms.controller;
 
-import com.example.blogms.response.BaseResponse;
+import com.example.blogms.dto.response.BaseResponse;
 import com.example.blogms.service.impl.LikeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

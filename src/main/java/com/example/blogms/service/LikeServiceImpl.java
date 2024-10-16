@@ -21,7 +21,7 @@ public class LikeServiceImpl implements LikeService {
         var email = SecurityContextHolder.getContext().getAuthentication().getName();
 
         if (likeRepository.existsByPost_PostIdAndEmail(postId, email)) {
-            throw new ResourceExistException("You liked this post");
+            throw new ResourceExistException("You already liked this post");
 
         }
         Post postEntity = postRepository.findById(postId)

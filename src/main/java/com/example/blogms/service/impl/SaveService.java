@@ -1,0 +1,13 @@
+package com.example.blogms.service.impl;
+
+import com.example.blogms.dto.response.PostResponseDto;
+
+import java.util.List;
+
+public interface SaveService {
+    void addSave(Long postId);
+
+    void deleteMySavesById(Long postId);
+
+    List<PostResponseDto> getMySaveList();
+}

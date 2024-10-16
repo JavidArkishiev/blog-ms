@@ -1,6 +1,6 @@
 package com.example.blogms.config;
 
-import com.example.blogms.response.BaseResponse;
+import com.example.blogms.dto.response.BaseResponse;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;

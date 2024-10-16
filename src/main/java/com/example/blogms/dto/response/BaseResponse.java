@@ -1,4 +1,4 @@
-package com.example.blogms.response;
+package com.example.blogms.dto.response;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Getter;
