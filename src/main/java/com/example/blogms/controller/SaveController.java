@@ -18,7 +18,7 @@ public class SaveController {
     private final SaveService saveService;
 
     @PostMapping("/{postId}")
-    @ResponseStatus(HttpStatus.OK)
+    @ResponseStatus(HttpStatus.CREATED)
     public BaseResponse<String> addSave(@PathVariable Long postId) {
         saveService.addSave(postId);
         return BaseResponse.success("This post added save list");
