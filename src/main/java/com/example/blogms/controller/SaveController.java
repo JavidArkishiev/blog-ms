@@ -33,8 +33,9 @@ public class SaveController {
 
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
-    public BaseResponse<List<PostResponseDto>> getMySaveList() {
-        return BaseResponse.oK(saveService.getMySaveList());
+    public BaseResponse<List<PostResponseDto>> getMySaveList(@RequestParam(defaultValue = "0") int page,
+                                                             @RequestParam(defaultValue = "8") int size) {
+        return BaseResponse.oK(saveService.getMySaveList(page, size));
     }
 
 }

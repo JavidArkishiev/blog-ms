@@ -9,5 +9,5 @@ public interface SaveService {
 
     void deleteMySavesById(Long postId);
 
-    List<PostResponseDto> getMySaveList();
+    List<PostResponseDto> getMySaveList(int page, int size);
 }

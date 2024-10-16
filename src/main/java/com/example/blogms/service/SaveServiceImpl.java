@@ -13,6 +13,9 @@ import com.example.blogms.repository.PostRepository;
 import com.example.blogms.repository.SaveRepository;
 import com.example.blogms.service.impl.SaveService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
@@ -55,9 +58,11 @@ public class SaveServiceImpl implements SaveService {
     }
 
     @Override
-    public List<PostResponseDto> getMySaveList() {
+    public List<PostResponseDto> getMySaveList(int page, int size) {
+        Pageable pageable = PageRequest.of(page, size, Sort.by("createdAt").descending());
+
         var email = SecurityContextHolder.getContext().getAuthentication().getName();
-        List<Save> saveList = saveRepository.findByEmail(email);
+        List<Save> saveList = saveRepository.findByEmail(email, pageable);
         if (saveList.isEmpty()) {
             return Collections.emptyList();
         }
