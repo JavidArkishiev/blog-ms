@@ -2,7 +2,7 @@ package com.example.blogms.controller;
 
 import com.example.blogms.dto.response.PostResponseDto;
 import com.example.blogms.dto.response.BaseResponse;
-import com.example.blogms.service.impl.SaveService;
+import com.example.blogms.service.SaveService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.access.prepost.PreAuthorize;

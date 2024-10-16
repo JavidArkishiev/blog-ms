@@ -1,6 +1,6 @@
 package com.example.blogms.config;
 
-import com.example.blogms.service.impl.JWTService;
+import com.example.blogms.service.JWTService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

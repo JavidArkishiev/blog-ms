@@ -1,4 +1,4 @@
-package com.example.blogms.service.impl;
+package com.example.blogms.service;
 
 import io.jsonwebtoken.Claims;
 

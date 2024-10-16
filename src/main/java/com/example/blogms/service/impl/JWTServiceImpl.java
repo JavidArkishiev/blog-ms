@@ -1,6 +1,6 @@
-package com.example.blogms.service;
+package com.example.blogms.service.impl;
 
-import com.example.blogms.service.impl.JWTService;
+import com.example.blogms.service.JWTService;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.io.Decoders;

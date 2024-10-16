@@ -4,7 +4,7 @@ import com.example.blogms.dto.request.PostRequestDto;
 import com.example.blogms.dto.response.MyPostResponseDto;
 import com.example.blogms.dto.response.PostResponseDto;
 import com.example.blogms.dto.response.BaseResponse;
-import com.example.blogms.service.impl.PostService;
+import com.example.blogms.service.PostService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

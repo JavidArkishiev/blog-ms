@@ -1,4 +1,4 @@
-package com.example.blogms.service;
+package com.example.blogms.service.impl;
 
 import com.example.blogms.entity.Like;
 import com.example.blogms.entity.Post;
@@ -6,7 +6,7 @@ import com.example.blogms.exception.ResourceExistException;
 import com.example.blogms.exception.ResourceFoundException;
 import com.example.blogms.repository.LikeRepository;
 import com.example.blogms.repository.PostRepository;
-import com.example.blogms.service.impl.LikeService;
+import com.example.blogms.service.LikeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;

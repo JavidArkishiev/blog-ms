@@ -1,4 +1,4 @@
-package com.example.blogms.service;
+package com.example.blogms.service.impl;
 
 import com.example.blogms.client.UserClient;
 import com.example.blogms.dto.response.PostResponseDto;
@@ -11,7 +11,7 @@ import com.example.blogms.mapper.PostMapper;
 import com.example.blogms.repository.LikeRepository;
 import com.example.blogms.repository.PostRepository;
 import com.example.blogms.repository.SaveRepository;
-import com.example.blogms.service.impl.SaveService;
+import com.example.blogms.service.SaveService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;

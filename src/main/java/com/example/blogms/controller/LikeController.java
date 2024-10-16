@@ -1,7 +1,7 @@
 package com.example.blogms.controller;
 
 import com.example.blogms.dto.response.BaseResponse;
-import com.example.blogms.service.impl.LikeService;
+import com.example.blogms.service.LikeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

@@ -1,4 +1,4 @@
-package com.example.blogms.service;
+package com.example.blogms.service.impl;
 
 import com.example.blogms.client.UserClient;
 import com.example.blogms.dto.request.PostRequestDto;
@@ -10,8 +10,8 @@ import com.example.blogms.exception.ResourceFoundException;
 import com.example.blogms.mapper.PostMapper;
 import com.example.blogms.repository.LikeRepository;
 import com.example.blogms.repository.PostRepository;
-import com.example.blogms.service.impl.JWTService;
-import com.example.blogms.service.impl.PostService;
+import com.example.blogms.service.JWTService;
+import com.example.blogms.service.PostService;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
